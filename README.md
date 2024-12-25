@@ -1,4 +1,4 @@
-# private-search-helm
+# private-search
 
 A helm chart that utilizes searxng to privatize search
 
