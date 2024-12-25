@@ -1,0 +1,17 @@
+name: Pull Request GitHub Action
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Setup Helm
+        uses: azure/setup-helm@v4.2.0
+      - name: Helm Lint
+        run: helm lint $GITHUB_WORKSPACE/chart
