@@ -17,4 +17,4 @@ jobs:
       - name: Setup Helm
         uses: azure/setup-helm@v4.2.0
       - name: Helm Lint
-        run: helm lint $GITHUB_WORKSPACE/chart
+        run: helm lint ${GITHUB_WORKSPACE}/chart
