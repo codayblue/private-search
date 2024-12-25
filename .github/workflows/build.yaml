@@ -21,7 +21,7 @@ jobs:
       - name: Set chart version
         uses: mikefarah/yq@master
         with:
-          cmd: yq -i '.version = "${{  github.ref_name }}"' "${GITHUB_WORKSPACE}/chart/config.yml"
+          cmd: yq -i '.version = "${{  github.ref_name }}"' "${GITHUB_WORKSPACE}/chart/Chart.yaml"
 
       - name: Build and Push
         run: |
